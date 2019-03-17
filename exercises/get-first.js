@@ -8,7 +8,9 @@
  */
 
 // Your code :
-
+const getFirst = (subject) => {
+  return subject[0];
+}
 //* Begin of tests
 const assert = require('assert')
 
