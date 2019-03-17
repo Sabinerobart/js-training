@@ -9,7 +9,31 @@
  */
 
 // Your code :
+const multiply = (numberOne, numberTwo) => {
 
+  let count = 1;
+  let result = 0;
+
+  if (numberOne < 0 && numberTwo < 0) {
+    while (count <= -numberTwo) {
+      result = result + numberOne;
+      count += 1;
+    };
+    return -result;
+  } else if (numberOne > 0 && numberTwo < 0) {
+    while (count <= numberOne) {
+      result += numberTwo;
+      count += 1;
+    };
+    return result;
+  } else {
+      while (count <= numberTwo) {
+        result = result + numberOne;
+        count += 1;
+      };
+    return result;
+  };
+}
 //* Begin of tests
 const assert = require('assert')
 

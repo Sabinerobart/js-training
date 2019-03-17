@@ -5,7 +5,12 @@
  * and return the total
  *
  */
-
+const total = (subject) => {
+  const reduced = subject.reduce((a, c) => {
+    return a + c;
+  });
+  return reduced;
+}
 
 //* Begin of tests
 const assert = require('assert')
