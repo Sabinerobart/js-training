@@ -10,7 +10,23 @@
  */
 
 // Your code :
-
+const multiply = (a, b) => {
+  if (a === 0 || b === 0) {
+    return 0;
+  } else if (a === 1) {
+    return b;
+  } else if (b === 1) {
+    return a;
+  } else if (b > 0) {
+    return a + multiply(a, b-1);
+  } else if (b < 0) {
+    return b - multiply(a -1, -b);
+  } else if (a > 0) {
+    return b + multiply(a-1, b);
+  } else if (a < 0) {
+    return b - multiply(-a, b)
+  }
+};
 //* Begin of tests
 const assert = require('assert')
 

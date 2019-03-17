@@ -10,10 +10,11 @@
  *
  */
 
-
+const jadenCase = (str) => {
+  return str.replace(/\b\w/g, l => l.toUpperCase());
+};
 
 //* Begin of tests
 const assert = require('assert')
-
-assert.fail('You must write your own tests')
+assert.strictEqual(jadenCase("jaden smith"), 'Jaden Smith')
 // End of tests */
